@@ -1,3 +1,8 @@
+/**
+ * @author: Sakhr Al-absi
+ * @Gruppe: 6
+ * @Matrikelnummer: s0562218
+ */
 const User = require("../models/user");
 const jwt = require("jsonwebtoken"); // um ein 'signed token' zu generieren
 const expressJwt = require("express-jwt"); // für Autorisationscheck

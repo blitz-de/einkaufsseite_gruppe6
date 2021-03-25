@@ -1,0 +1,33 @@
+using the routes in our backend after requiring them
+
+a. authRoutes: 
+    i. post signup: will post/add user using signup to the database 
+    ii. post signin: will post the user to be checked if he exists in the database, if yes, give him/her back the page required. If not, signup.
+    iii. get signout: get the homepage after signing out
+    
+b. userRoutes:
+    * Includes admins and normal users
+     i. get the secret of user id -> isAuth and isAdmin
+     ii. get user by id using read -> for normal user
+     iii. put user by userId using update -> =
+     iv.  param userId using userById to get the userID from the controller (controller gets it form models)
+
+c.categoryRoutes:
+    i. get category by id using read
+    ii. post category by userId using create -> isAdmin, isAuth, isSigned
+    iii. put category of categoryId by userId using update->isAdmin, isAuth, ==
+    iv. delete category of categoryId by userId using delete -> isAdmin, ====
+    v. get list of categories using list, which is implemented in controller
+    vi. param categoryId and userId to use the in the urls to get id's of both
+
+d. productRoutes: will import the product.js from controllers
+    i. get product by id using "read"
+    ii. post product by user id using "create"-> isAdmin
+    iii. delete product by user id using "remove"-> isAdmin
+    iv. put product of prouct id by user id using "update"-> isAdmin
+    v. get list of products using list which is imported from controller
+    vi. get list of related products by product id using listRelated
+    vii. get categories using listCategories
+    viii. post categories by search using listBySearch
+    ix. get product photo by product id using photo
+    x. use userById and productById to by able to get the user product ids accordingly in the routes

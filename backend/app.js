@@ -1,3 +1,8 @@
+/**
+ * @author: Sakhr Al-absi
+ * @Gruppe: 6
+ * @Matrikelnummer: s0562218
+ */
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
