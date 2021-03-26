@@ -1,3 +1,8 @@
+/**
+ * @author: Sakhr Al-absi
+ * @Gruppe: 6
+ * @Matrikelnummer: s0562218
+ */
 const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
 

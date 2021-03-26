@@ -1,4 +1,8 @@
-import React, { useState, useEffect } from "react";
+/**
+ * @author: Sakhr Al-absi
+ * @Gruppe: 6
+ * @Matrikelnummer: s0562218
+ */import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import Layout from "../core/Layout";
 import { signin, authenticate, isAuthenticated } from "../auth";

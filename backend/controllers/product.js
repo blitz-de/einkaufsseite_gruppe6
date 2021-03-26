@@ -1,9 +1,22 @@
+/**
+ * @author: Sakhr Al-absi
+ * @Gruppe: 6
+ * @Matrikelnummer: s0562218
+ */
+
 const formidable = require("formidable");
 const _ = require("lodash");
 const fs = require("fs");
 const Product = require("../models/product");
 const { errorHandler } = require("../helpers/dbErrorHandler");
 
+/**
+ * 
+ * @param {*} req the product on the page will be assigned the parameter product
+ * @param {*} res will response with an error if the product is not there
+ * @param {*} next after finding the product will go to the next one
+ * @param {*} id to be used to find the product by id
+ */
 exports.productById = (req, res, next, id) => {
     Product.findById(id).exec((err, product) => {
         if (err || !product) {
@@ -16,11 +29,29 @@ exports.productById = (req, res, next, id) => {
     });
 };
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res response with the request product
+ * @returns 
+ */
 exports.read = (req, res) => {
     req.product.photo = undefined;
     return res.json(req.product);
 };
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ * Hence, we need to upload a photo when creating a product, we will use 
+ * forms to do that.
+ * In the form we will have the constans of the prodcts as fields
+ * If these fields are not filled than an error is going to be shown
+ * If all necessary fields are filled than a new product is going to be created
+ * with the fields filled.
+ * 
+ */
 exports.create = (req, res) => {
     let form = new formidable.IncomingForm();
     form.keepExtensions = true;
@@ -79,6 +110,11 @@ exports.create = (req, res) => {
     });
 };
 
+/**
+ * 
+ * @param {*} req the request.product is going to be removed using remove
+ * @param {*} res respnse with a message of successful deletion
+ */
 exports.remove = (req, res) => {
     let product = req.product;
     product.remove((err, deletedProduct) => {
@@ -93,6 +129,11 @@ exports.remove = (req, res) => {
     });
 };
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 exports.update = (req, res) => {
     let form = new formidable.IncomingForm();
     form.keepExtensions = true;

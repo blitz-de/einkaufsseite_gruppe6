@@ -1,3 +1,8 @@
+/**
+ * @author: Sakhr Al-absi
+ * @Gruppe: 6
+ * @Matrikelnummer: s0562218
+ */
 import React, { useState, useEffect } from "react";
 import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";

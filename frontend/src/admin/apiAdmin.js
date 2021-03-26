@@ -1,3 +1,8 @@
+/**
+ * @author: Sakhr Al-absi
+ * @Gruppe: 6
+ * @Matrikelnummer: s0562218
+ */
 import { API } from "../config";
 
 export const createCategory = (userId, token, category) => {
