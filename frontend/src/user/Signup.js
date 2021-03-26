@@ -3,10 +3,10 @@
  * @Gruppe: 6
  * @Matrikelnummer: s0562218
  */
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Redirect } from "react-router-dom";
 import Layout from "../core/Layout";
-import { signup } from "../auth";
+import { signin, authenticate, isAuthenticated } from "../auth";
 
 const Signup = () => {
     const [values, setValues] = useState({

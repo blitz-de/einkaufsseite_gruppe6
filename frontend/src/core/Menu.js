@@ -3,9 +3,9 @@
  * @Gruppe: 6
  * @Matrikelnummer: s0562218
  */
-import React, { Fragment } from "react";
+import React from "react";
 import { Link, withRouter } from "react-router-dom";
-import { signout, isAuthenticated } from "../auth";
+import { signout } from "../auth";
 
 const isActive = (history, path) => {
     if (history.location.pathname === path) {
