@@ -1,0 +1,37 @@
+#1 App.js
+
+The whole backend application is based here and all other modules
+and classed will be required/imported to this class. 
+
+a. creating an express app by requiring express and creating a const app
+
+b. imporing the database using mongoose
+
+c. using all the necessary middlewares using external module
+    -morgan: HTTP request to simplify the process of logging requests to our app. It saves time  by generating request logs
+    -bodyParser: 
+        * it extracts the entire body portion of an incoming request stream and exposes it on req.
+        * It parses the JSON, buffer, string and URL encoded data submitted using HTTP POST request. 
+                 
+    -cookieParse: 
+        * to parse cookie header and populate req. Cookies with an object keyed by the cookie names.
+        * I can also pass a secret string, which assigns req.
+    -expressValidator:
+        * a set of express middlewares that wraps validator.js validator and sanitizer functions.
+        * It can be used to incorporate in our app for server-side data validation
+    -cors: to make the bridge between front- and backend
+
+d. using the routes in our backend after requiring them
+    -authRoutes: 
+    -userRoutes: 
+    -categoryRoutes:
+    -productRoutes:
+
+Eventually, set a default port that we want to hear from and allow
+the possibility to enter another port throught the .env file located in the backend file.
+
+# .env
+DATABASE=mongodb://localhost/ecommerce
+PORT=8000
+JWS_SECRET=hdfsajkfhlsdkja
+

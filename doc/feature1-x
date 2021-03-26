@@ -1,0 +1,53 @@
+1 Erstellung der routes
+
+2 Erstellung von controllers 
+
+3 Erstellung des User Schema
+
+4 Erstellung der virual methods und fields
+
+5 Erstellung the user sign up (Erstellung der Registrierung)
+
+6 die Verwendung der express validators
+
+7 User Sign-in mit der Verwendung von jwt
+
+8 User signout (Benutzer-Ausloggen)
+
+9 require signin middleware (Einloggen-Anfrage Middleware)
+ 
+10 User by id middleware (BenutzerId über ein Middleware)
+
+11 auth und admin middleware (Authentisierung und admin Middleware)
+
+12 Category model route und controller (Kategorie Model, Route und Controller)
+
+13 Erstellung ein Product Model 
+
+14 Erstellung ein Product mit file upload (mit Datei Hochladen)
+
+15 Erstellung eines Products mit der Verwendung von Postman 
+
+16 Erstellung der product validation
+
+17 product by id middleware und single product (ProduktId Middleware und Einzelprodukt)
+
+18 product delete (Produktlöschen)
+
+19 product update (Produktbearbeitung)
+
+20 Category by id und single Category (KategorieId und Einzelprodukt)
+
+21 Category by update, delete und get all (Kategorie-Bearbeitung, Löschen, und Alles zurückegeben)
+
+22 product by sell und arrival req query params (Produkt anhand Verkauf und Ankunft req-Anfrage-params)
+
+23 Erstellung von related Products (gemeinssame Produkte)
+
+24 List product categories
+
+25 list products by search (Produktliste anhand Suchen)
+
+26 send product photo (Produktsbild senden)
+
+27 user profile read und update (Benutzerprofile lesen und bearbeiten)

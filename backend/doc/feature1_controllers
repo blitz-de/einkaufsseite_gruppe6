@@ -1,0 +1,56 @@
+
+auth.js
+    a. Imports
+        i. jwt and express-jwt to generate a signed token and check authorisation
+
+    b. signup: has the parameters req and res
+        i. Create a user using the input of the user in the body of the html page using req.body as a parameter for the user Object
+        ii. The user will be than saved and the password will get an extra hash to make a safer password. 
+        iii. the page will respond with the user information 
+
+    c. signin: has the parameters req and res
+        i. Will use the gived information (email and password ) by the user to find them in the database using findOne
+        ii. If the user is found in the database, the user will be authenticated by the password, if he has access or not
+        iii. If the user has access a token will be created using JWT and will be held by a cookie
+        iv. A response with the user and token will be given back to the frontend.
+
+    d. signout: 
+        i. clear the cookie created previously
+        ii. show a message of successful logout in the new page /signout
+
+    e. requiredSignin: This will be used as a middleware before reaching to specific pages
+        i. at the beginning it will check for the jwt secret and authenticate the user. If they're authenticated then they will be allowed
+            access to the resources requested accordingly.
+
+    f. isAuth:
+        i. will check if the uesr is authenticated or not.
+
+    g. isAdmin 
+        i. will check if the uesr is an admin or not. If the user has the number 0 assigned to him/her
+        they're  normal users if the number 1 is assigned to them, they are admins with admin access
+
+user.js
+    a. userById: takes request, response, next, and id as parameters
+        i. using findById the user id will be called and searched for in the database.
+        => If it is found it will be assigned to the req.profile
+    b. read: it will take request and response as parameters
+        i. it will return the requested profile bzw user
+
+    c. update: 
+        i. findOneAndUpdate: This will find the user by userId (req.profile.id) and will
+                              set a new req.body. The new edited user will be returned a response.json .
+
+category.js
+
+    a. categoryById: 
+
+    b. create
+
+    c. read
+
+    d. update
+
+    e. remove
+
+    f. list
+
