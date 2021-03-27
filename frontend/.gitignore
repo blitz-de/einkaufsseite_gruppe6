@@ -22,6 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# ignore package-lock.json and package.json
-../package.json
-../package-lock.json
+# Ignore dev environment variables
+.env

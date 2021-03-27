@@ -9,6 +9,10 @@ import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
 import { createProduct, getCategories } from "./apiAdmin";
 
+/**
+ * 
+ * @returns values of the product info in their current state
+ */
 const AddProduct = () => {
     const [values, setValues] = useState({
         name: "",

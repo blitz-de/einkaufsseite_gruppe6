@@ -3,9 +3,9 @@
  * @Gruppe: 6
  * @Matrikelnummer: s0562218
  */
-import React from "react";
+import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { signout } from "../auth";
+import { signout, isAuthenticated } from "../auth";
 
 const isActive = (history, path) => {
     if (history.location.pathname === path) {
@@ -14,7 +14,14 @@ const isActive = (history, path) => {
         return { color: "#ffffff" };
     }
 };
-
+/**
+ * Erstellung der Hauptseite, mit den Leisten Hauptseite, Dashboard (admin und !admin),
+ * Einloggen, Ausloggen, und registerieren
+ * 
+ * history wird benutzt um das aktive seite hervorzuheben.
+ * @param  param0 
+ * @returns Das <div> element mit alle anderen Unterelemente ...
+ */
 const Menu = ({ history }) => (
     <div>
         <ul className="nav nav-tabs bg-primary">

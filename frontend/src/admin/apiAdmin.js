@@ -5,6 +5,13 @@
  */
 import { API } from "../config";
 
+/**
+ * fetches the data in localhost/frontend/product/create/userId and post the response in the addCategory Component
+ * @param {} userId 
+ * @param {*} token 
+ * @param {*} category 
+ * @returns 
+ */
 export const createCategory = (userId, token, category) => {
     return fetch(`${API}/category/create/${userId}`, {
         method: "POST",
@@ -23,6 +30,7 @@ export const createCategory = (userId, token, category) => {
         });
 };
 
+/** fetches the data in localhost/frontend/product/create/userId and post the response in the addCategory Component*/
 export const createProduct = (userId, token, product) => {
     return fetch(`${API}/product/create/${userId}`, {
         method: "POST",

@@ -1,0 +1,35 @@
+1 Erstelltung von Routes mit der Verwendung von BrowserRouter (user/signup, user/signin usw..)
+
+2 Signup mit der Verwendung von userState und useEffect und handleChange um Events zu handleChange
+    * //Der HTML-Form wird in einer Methode geschrieben
+
+3 Erstellung von auth und index.js (sie wird die fetch methode enthalten, die die Daten von dem Frontend zum Backend kommunizieren wrid)
+
+4 Erstellung von Signin, ganz ähnlich zu Signin
+    * hier wird nur die RedirectMethode erstellt, um den nutzer zur richitgen seite weiterzuleiten
+
+5 localstorage und token über authenticate() in index.js hinzufügen, um sie in signin zu verwenden
+
+6 Erstellung von signout
+
+7 Erstellung von privateRoute
+    // siderynote
+    /** React.createElement(component, props, ...children) 
+     * from the code: <MyButton color="blue" shadowSize={2}>
+     *                   Click Me </MyButton>
+     * compiles to:
+     * React.createElement(MyButton, 
+                {color: 'blue', shadowsize: 2},
+                'Click Me');
+     */
+
+7 Erstellung von UserDashboard
+
+8 Erstellung von AdminDashboard
+    - über der adminRoute kann dann entschieden werden, welche Seite den admin zugriff drauf hat
+    - genauso wie bei privateRoute aber mit der Erwähnung von Benutzerrolle
+
+9 Erstelltung von Category
+
+
+

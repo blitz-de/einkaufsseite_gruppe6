@@ -8,6 +8,10 @@ import { Redirect } from "react-router-dom";
 import Layout from "../core/Layout";
 import { signin, authenticate, isAuthenticated } from "../auth";
 
+/**
+ * wie signup aber hier wurde die email und pass per default gesetzt
+ * @returns 
+ */
 const Signin = () => {
     const [values, setValues] = useState({
         email: "s0562218@htw-berlin.de",
@@ -24,6 +28,25 @@ const Signin = () => {
         setValues({ ...values, error: false, [name]: event.target.value });
     };
 
+    /**
+ * wenn auf submit geklickt wird, dann werden die gehandelte Werte 
+ * gesetzt.
+ * 
+ * 1) preventDefault(), damit die Seite sich nicht immer aktualisiert, wenn 
+ *    man auf das Btn klickt
+ * 2) signin(name,..) aus auth/index.js benutzen um die eingaben zu fetchen und sie an den backend zu senden.
+ *      -> wenn es klappt dann wird ein successMessage aufgezeigt, sonst 
+ *          werden die values gesetzt und ein SuccessMessage aufgezeigt
+ * 3) hier haben wir auch loading, damit es aufgezeigt wird, wenn 
+ * die Seite geloadet wird
+ * 
+ * 4) Wenn der User authentisiert ist und admin zugriffsrechte hat,
+ *  dann wird er/sie zu /admin/dashboard weitergeleitet.
+ * Wenn sie einen normalen Nutzer sind, dann an /user/dashboard  weitergeleitet
+ * das passiert mit der Verwendung von redirectToReferrrer in redirectUser
+ * Der admin hat die nummer 1 zum ihm zugewiesen.
+ * @param {*} event 
+ */
     const clickSubmit = event => {
         event.preventDefault();
         setValues({ ...values, error: false, loading: true });
@@ -41,6 +64,10 @@ const Signin = () => {
         });
     };
 
+    /**
+     * wie bei signUpForm
+     * @returns 
+     */
     const signUpForm = () => (
         <form>
             <div className="form-group">
@@ -68,6 +95,10 @@ const Signin = () => {
         </form>
     );
 
+    /**
+     * Aufzeigen einer Fehlermeldung
+     * @returns 
+     */
     const showError = () => (
         <div
             className="alert alert-danger"
@@ -77,6 +108,10 @@ const Signin = () => {
         </div>
     );
 
+    /**
+     * bitte warten aufzeigen, wenn es auf true gesetzt ist
+     * @returns <div> mit bitte warten drinne </div>
+     */
     const showLoading = () =>
         loading && (
             <div className="alert alert-info">
@@ -84,6 +119,10 @@ const Signin = () => {
             </div>
         );
 
+    /**
+     * leitet der Nutzer zum der richtigen Seite anhand ihre Zugriffsrechte
+     * @returns die richtige Seite 
+     */
     const redirectUser = () => {
         if (redirectToReferrer) {
             if (user && user.role === 1) {

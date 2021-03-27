@@ -9,6 +9,10 @@ import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
 import { createCategory } from "./apiAdmin";
 
+/**
+ * 
+ * @returns the categoryForm, the success and error message and the link to go back to dashboard
+ */
 const AddCategory = () => {
     const [name, setName] = useState("");
     const [error, setError] = useState(false);
@@ -37,7 +41,11 @@ const AddCategory = () => {
         });
     };
 
-    const newCategoryFom = () => (
+    /**
+     * 
+     * @returns A form element with a name, input field and a button
+     */
+    const newCategoryForm = () => (
         <form onSubmit={clickSubmit}>
             <div className="form-group">
                 <label className="text-muted">Name</label>
@@ -54,18 +62,30 @@ const AddCategory = () => {
         </form>
     );
 
+    /**
+     * 
+     * @returns A message to be shown by success
+     */
     const showSuccess = () => {
         if (success) {
             return <h3 className="text-success">{name} wurde erstellt</h3>;
         }
     };
 
+    /**
+  * 
+  * @returns A message to be shown by Fehler
+  */
     const showError = () => {
         if (error) {
             return <h3 className="text-danger">Kategorie soll einzigartig sein</h3>;
         }
     };
 
+    /**
+     * 
+     * @returns A link to go back to dashboard
+     */
     const goBack = () => (
         <div className="mt-5">
             <Link to="/admin/dashboard" className="text-warning">
@@ -83,7 +103,7 @@ const AddCategory = () => {
                 <div className="col-md-8 offset-md-2">
                     {showSuccess()}
                     {showError()}
-                    {newCategoryFom()}
+                    {newCategoryForm()}
                     {goBack()}
                 </div>
             </div>

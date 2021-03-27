@@ -8,6 +8,10 @@ import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
 
+/**
+ * Will have user links, user info, and purchase history
+ * @returns the <div> containing the userLinks(), userInfo() and puchaseHistory()
+ */
 const Dashboard = () => {
     const {
         user: { _id, name, email, role }

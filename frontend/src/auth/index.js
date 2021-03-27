@@ -5,6 +5,11 @@
  */
 import { API } from "../config";
 
+/**
+ * fetcht die Daten von dem Front- zum Backend mit POST
+ * @param {*} user der zum backend geschickt wird
+ * @returns 
+ */
 export const signup = user => {
     return fetch(`${API}/signup`, {
         method: "POST",
@@ -22,6 +27,11 @@ export const signup = user => {
         });
 };
 
+/**
+ * fetcht die Daten von dem Front- zum Backend mit POST
+ * @param {*} user der zum backend geschickt wird
+ * @returns 
+ */
 export const signin = user => {
     return fetch(`${API}/signin`, {
         method: "POST",
@@ -39,6 +49,11 @@ export const signin = user => {
         });
 };
 
+/**
+ * Authentifiziert den benutzer und addiert ein token in das localstorage
+ * @param {*} data 
+ * @param {*} next 
+ */
 export const authenticate = (data, next) => {
     if (typeof window !== "undefined") {
         localStorage.setItem("jwt", JSON.stringify(data));
@@ -46,6 +61,9 @@ export const authenticate = (data, next) => {
     }
 };
 
+/** Beim ausloggen nimmt das gespeicherte Token heraus
+ * und leitet den nutzer zur /signout weiter über GET
+*/
 export const signout = next => {
     if (typeof window !== "undefined") {
         localStorage.removeItem("jwt");
@@ -60,6 +78,12 @@ export const signout = next => {
     }
 };
 
+/**
+ * jwt in den localstorage setzen, falls benutzer authentifiziert ist 
+ * sie wird z.B. benutzt, um auch in Menu zu zeigen, falls den Benutzer
+ * authentiziert ist, dann wird das unaktive leiste nicht gezeigt
+ * @returns das token von jwt
+ */
 export const isAuthenticated = () => {
     if (typeof window == "undefined") {
         return false;
