@@ -68,7 +68,7 @@ const Signin = () => {
      * wie bei signUpForm
      * @returns 
      */
-    const signUpForm = () => (
+    const signInForm = () => (
         <form>
             <div className="form-group">
                 <label className="text-muted">Email</label>
@@ -144,7 +144,7 @@ const Signin = () => {
         >
             {showLoading()}
             {showError()}
-            {signUpForm()}
+            {signInForm()}
             {redirectUser()}
         </Layout>
     );
