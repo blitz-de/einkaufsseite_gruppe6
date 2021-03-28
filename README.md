@@ -47,3 +47,7 @@ Now start local frontend server
 ```
 $ npm start 
 ```
+
+Feauture 2 deployed website:
+
+https://ecommerce-feature2-gruppe6.herokuapp.com/
