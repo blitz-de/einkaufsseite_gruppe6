@@ -1,8 +1,3 @@
-/**
- * @author: Sakhr Al-absi
- * @Gruppe: 6
- * @Matrikelnummer: s0562218
- */
 exports.userSignupValidator = (req, res, next) => {
     req.check("name", "Name muss eingegeben werden").notEmpty();
     req.check("email", "Email muss zwischen 3 und 32 Zeichenketten behalten")

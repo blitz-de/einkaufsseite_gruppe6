@@ -1,0 +1,35 @@
+1 Erstellung von addProduct
+
+2 Erstellung von apiAdmin
+
+3 Erstellung von ApiCore
+
+4 Änderung von Home um die Produkte anhand verkaufszeit und Ankunfszeit aufzuladen
+
+5 Erstellung von Card
+
+6 Hinzufuegen von jumbotron in der style.css Datei und die stylesheet in /core/Layout importieren
+
+7 Erstellung von ShowImage und sie in Cart importieren
+
+8 Erstellung von Shop und Hinzufuegen von getCategories in apiAdmin
+
+9 Erstellung von Checkbox fuer die Kategorien zum Filtern
+    es wird auch in Shop benutzt in der handleFilter()
+
+10  Erstellung von RadionBox, um die Boxen zu erstellen, den man zum Filtern klicken kann
+    und sie in die Shop importieren
+
+11  In /apiAdmin Hinzufuegen von getFilteredProducts, um die gefilterte Produkte vom Backend zu bekommen
+
+12 Erstellung von Search.js und sie in Home importieren
+    Hinzufuegen von loadCategories in apiAdmin
+
+13 Erstellung von Prodoct.js
+    use in routes
+
+14 Erstellung von Cart
+
+15 Erstellung von carHelpers
+    um items in der localStorage hinzufuegen
+
