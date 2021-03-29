@@ -48,6 +48,6 @@ Now start local frontend server
 $ npm start 
 ```
 
-Deployed Website for Feature1:
+Feauture 2 deployed website:
 
-https://ecommerce-feature1-gruppe6.herokuapp.com/
+https://ecommerce-feature2-gruppe6.herokuapp.com/

@@ -30,7 +30,6 @@ JWT_SECRET=
 Start local backend server:
 
 ```
-$ cd backend
 $ npm start 
 ```
 

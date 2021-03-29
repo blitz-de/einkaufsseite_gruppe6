@@ -2,7 +2,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the frontend directory, you can add a .env file with the API in it, for example
+
+### `REACT_APP_API_URL=http://localhost:27017/api`
+
+In the same directory, open terminal and run:
+
+### `npm install`
 
 ### `npm start`
 
