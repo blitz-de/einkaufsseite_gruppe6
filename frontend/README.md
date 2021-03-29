@@ -4,11 +4,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the frontend directory, you can add a .env file with the API in it, for example
 
-### `REACT_APP_API_URL=http://localhost:27017/api`
+### `REACT_APP_API_URL=http://localhost:27018/api`
 
 In the same directory, open terminal and run:
 
 ### `npm install`
+
+To install some node_modules:
+
+### `npm i braintree-web-drop-in-react@1.0.7 moment@2.24.0 query-string@6.5.0 react@16.8.6 react-dom@16.8.6 react-router-dom@5.0.0 braintree-web@3.45.0`
+
+To start the server 
 
 ### `npm start`
 

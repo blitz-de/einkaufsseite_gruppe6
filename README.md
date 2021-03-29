@@ -29,11 +29,12 @@ Start local backend server:
 $ npm start 
 ```
 
-Open new terminal tab, navigate to frontend server and install node_modules in it:
+Open new terminal tab, navigate to frontend server and install node_modules in it as well as the necessary libs:
 
 ```
 $ cd frontend
 $ npm install
+$ npm i braintree-web-drop-in-react@1.0.7 moment@2.24.0 query-string@6.5.0 react@16.8.6 react-dom@16.8.6 react-router-dom@5.0.0 braintree-web@3.45.0
 ```
 
 Add a .env to the frontend folder, it should look something like below, depending on the port number you're using to connect to the server:
@@ -42,12 +43,12 @@ Add a .env to the frontend folder, it should look something like below, dependin
 REACT_APP_API_URL=http://localhost:PortNr/api
 ```
 
-Now start local frontend server
+Now install necessary modules and start local frontend server
 
 ```
+$ npm i braintree-web-drop-in-react@1.0.7 moment@2.24.0 query-string@6.5.0 react@16.8.6 react-dom@16.8.6 react-router-dom@5.0.0 braintree-web@3.45.0
 $ npm start 
 ```
 
-Feauture 2 deployed website:
-
-https://ecommerce-feature2-gruppe6.herokuapp.com/
+Feature 3 was deployed to:
+https://ecommerce-feature3-gruppe6.herokuapp.com/
